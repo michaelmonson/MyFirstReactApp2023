@@ -1,12 +1,23 @@
 function ListGroup() {
+  const items = [
+    "New York",
+    "Columbus",
+    "Melbourne",
+    "Uppsala",
+    "Salt Lake City",
+    "Eagle Mountain",
+    "Riverton",
+  ];
+
   return (
-    <ul className="list-group">
-      <li className="list-group-item">Item 1</li>
-      <li className="list-group-item">Item 2</li>
-      <li className="list-group-item">Item 3</li>
-      <li className="list-group-item">Item 4</li>
-      <li className="list-group-item">Item 5</li>
-    </ul>
+    //Using the angle bracket notation (open and close) to replace the 'Fragment' component
+    <>
+      <ul className="list-group">
+        {items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    </>
   );
 }
 
